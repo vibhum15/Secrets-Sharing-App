@@ -21,7 +21,7 @@ app.use(bodyparser.urlencoded({ extended: true }));
 
 app.use(
   session({
-    secret: "Our Little Secret",
+    secret: process.env.secret,
     resave: false,
     saveUninitialized: false,
   })
